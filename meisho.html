@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>観光スポット</title>
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .spot {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        .spot img {
+            width: 300px;
+            margin-right: 20px;
+        }
+        .spot p {
+            flex: 1;
+        }
+        .spot p strong {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">ホーム</a>
+        <a href="bunka.html">文化と歴史</a>
+        <a href="meisho.html">観光スポット</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="more.html">もっと見る</a>
+        <a href="access.html">交通指南</a>
+        <button id="theme-toggle" aria-label="Switch Theme" class="btn"><span>深色模式</span></button>
+    </nav>
+
+    <main>
+        <h2>観光スポット</h2>
+
+        <div class="spot">
+            <img src="images/taipei101.jpg" alt="台北101の写真">
+            <p><strong>台北101</strong>台北101は台北市のランドマークであり、かつて世界一高い超高層ビルとして有名です。101階建てのビルにはオフィス、ショッピングモール、展望台などがあり、観光客に人気です。特に新年のカウントダウンイベントでは、壮大な花火が打ち上げられ、世界中の注目を集めています。</p>
+        </div>
+
+        <div class="spot">
+            <img src="images/ximen.jpg" alt="西門町の写真">
+            <p><strong>西門町</strong>西門町は台北市内で最も活気のある地区の一つで、若者文化の中心地として知られています。ショッピング、グルメ、エンターテイメントの多彩な選択肢があり、特に週末には多くの地元の人々や観光客で賑わいます。また、映画館やライブハウスなども充実しており、台北の夜を楽しむには最適な場所です。</p>
+        </div>
+
+        <div class="spot">
+            <img src="images/palace_museum.jpg" alt="故宮博物院の写真">
+            <p><strong>故宮博物院</strong>故宮博物院は、中国の文化遺産を数多く所蔵している博物館で、世界的にも評価の高い文化施設です。中には中国古代からの貴重な文物が展示されており、訪れるたびに新しい発見があります。特に「翠玉白菜」と「肉形石」は、国内外の観光客に大変人気があります。</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2024 リンカセイ(24CA0244), All rights reserved.</p>
+    </footer>
+<script>
+const themeToggleBtn = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') || 'light';
+
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+
+themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+});
+</script>
+</body>
+</html>

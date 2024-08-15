@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>台北の文化と歴史</title>
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">ホーム</a>
+        <a href="bunka.html">文化と歴史</a>
+        <a href="meisho.html">観光スポット</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="more.html">もっと見る</a>
+        <a href="access.html">交通指南</a>
+        <button id="theme-toggle" aria-label="Switch Theme" class="btn"><span>深色模式</span></button>
+    </nav>
+
+    <main>
+        <h2>台北の文化と歴史</h2>
+        
+        <ul>
+            <li>
+                <h3>歴史</h3>
+                <p>台北市は1884年に正式に設立され、清朝の統治下で発展を始めました。1895年の下関条約により、日本に割譲され、日本統治時代（1895-1945年）に都市計画が整備され、近代的な都市としての基盤が築かれました。1945年後、台北は中華民国の行政中心となり、現在に至るまで台湾の政治、経済、文化の中心地として機能しています。</p>
+            </li>
+            <li>
+                <h3>文化</h3>
+                <p>台北は、多様な文化が共存する都市です。伝統的な台湾文化と、日本統治時代の影響、そして現代の西洋文化が融合しています。例えば、毎年行われるランタンフェスティバルや、中華圏最大級の夜市である士林夜市などがあり、これらは台北の多文化性を象徴しています。さらに、台北は現代アートの展示や音楽祭などの文化イベントも盛んで、地元住民や観光客に人気があります。</p>
+            </li>
+            <li>
+                <h3>夜市の歴史</h3>
+                <p>現在士林夜市がある場所は、もともとは基隆河の船着場でした。士林区（シーリン）近郊で収穫された農産物はこの船着場で売買され、その他の港町へ船で運ばれました。1909年の開業当時は昼間の市場でしたが、1913年に正式に夜市となりました。それからおよそ1世紀。士林夜市は台北市内で最大規模、かつ最も有名な夜市へと急成長を遂げます。市場は開業以来ずっと同じ場所で営業を続けていましたが、2002年に老朽化した建物の改修が始まると、屋台を臨時の場所へ移転させました。そして2012年、ついに新しい士林夜市が誕生しました。</p>
+            </li>
+        </ul>
+
+<p><small>参考: <a class="custom-link" href="https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82" target="_blank" >台北市 - Wikipedia</a></small></p>
+    </main>
+    <footer>
+        <p><small>Copyright &copy; 2024 リンカセイ(24CA0244), All rights reserved.</small></p>
+    </footer>
+<script>
+const themeToggleBtn = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') || 'light';
+
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+
+themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+});
+</script>
+</body>
+</html>

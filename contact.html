@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>お問い合わせ</title>
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">ホーム</a>
+        <a href="bunka.html">文化と歴史</a>
+        <a href="meisho.html">観光スポット</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="more.html">もっと見る</a>
+        <a href="access.html">交通指南</a>
+        <button id="theme-toggle" aria-label="Switch Theme" class="btn"><span>深色模式</span></button>
+    </nav>
+
+    <main>
+        <h2>お問い合わせ</h2>
+        <p>こんにちは、リンカセイです。</p>
+        <p>学籍番号：24CA0244</p>
+        <p>メール：<a href="mailto:24ca0244@jec.ac.jp"  class="custom-link">24ca0244@jec.ac.jp</a></p>
+<br>
+    <h3>参考資料</h3>
+<ul>
+    <li><a class="custom-link" href="https://www.agoda.com/ja-jp/travel-guides/taiwan/taipei/shilin-night-market-must-visit-attraction-taiwan/?cid=-218" target="_blank">士林夜市に関する資料 - Agoda</a></li>
+    <li><a class="custom-link" href="https://nn.sumaart.com/share/327.html" target="_blank">台北に関するデザイン資料 - SumaArt</a></li>
+    <li><a class="custom-link" href="https://sankoudesign.com/" target="_blank">デザインに関する資料 - Sanko Design</a></li>
+    <li><a class="custom-link" href="https://skyticket.jp/guide/382915/" target="_blank">台北観光ガイド - SkyTicket</a></li>
+    <li><a class="custom-link" href="https://www.cosmopolitan.com/tw/lifestyle/travel/g35210256/beitou-hot-spring-20210217/" target="_blank">北投温泉に関する資料 - Cosmopolitan</a></li>
+    <li><a class="custom-link" href="https://www.hk01.com/%E7%86%B1%E7%88%86%E8%A9%B1%E9%A1%8C/12277/%E5%8F%B0%E5%8C%97%E6%95%85%E5%AE%AE-%E6%96%87%E7%89%A9%E4%B8%8D%E6%9C%83-%E6%AD%B8%E9%82%84-%E5%A4%A7%E9%99%B8-%E5%85%A7%E5%9C%B0%E7%B6%B2%E5%8F%8B-%E5%AE%89%E5%BF%83%E4%BA%86" target="_blank">台北故宮に関する資料 - 香港01</a></li>
+    <li><a class="custom-link" href="https://www.travel.taipei/zh-tw/tour/hellotaipei" target="_blank">台北の旅行ガイド - 台北旅遊網</a></li>
+    <li><a class="custom-link" href="https://zh.wikipedia.org/wiki/%E8%87%BA%E5%8C%97%E5%B8%82%E6%AD%B7%E5%8F%B2" target="_blank">台北市の歴史 - Wikipedia</a></li>
+    <li><a class="custom-link" href="https://www.w3schools.com/html/" target="_blank">HTML 参考 - W3Schools</a></li>
+    <li><a class="custom-link" href="https://www.w3schools.com/css/" target="_blank">CSS 参考 - W3Schools</a></li>
+    <li><a class="custom-link" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">HTML 参考 - MDN Web Docs</a></li>
+    <li><a class="custom-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS 参考 - MDN Web Docs</a></li>
+    <li><a class="custom-link" href="https://css-tricks.com/guides/" target="_blank">CSS 技巧 - CSS-Tricks</a></li>
+    <li><a class="custom-link" href="https://blog.tarswork.com/post/a-selection-of-cool-css-button-effects" target="_blank"> CSS 按鈕特效 - CSS-Tricks</a></li>
+</ul>
+    </main>
+
+    <footer>
+        <p><small>Copyright &copy; 2024 リンカセイ(24CA0244), All rights reserved.</small></p>
+    </footer>
+
+<script>
+const themeToggleBtn = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') || 'light';
+
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+
+themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>もっと見る</title>
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .images2 {
+            width: 100%;
+        }
+
+        .images2 td {
+            width: 33.33%;
+            padding: 10px;
+            box-sizing: border-box;
+            vertical-align: top;
+        }
+
+        .images2 img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .px {
+            display: inline-block;
+            width: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">ホーム</a>
+        <a href="bunka.html">文化と歴史</a>
+        <a href="meisho.html">観光スポット</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="more.html">もっと見る</a>
+        <a href="access.html">交通指南</a>
+        <button id="theme-toggle" aria-label="Switch Theme" class="btn"><span>深色模式</span></button>
+    </nav>
+
+    <main>
+        <h2>もっと見る</h2>
+        <table class="images2">
+            <tr>
+                <td>
+                    <img src="images/hot-springs.jpg" alt="北投温泉の写真">
+                    <p>北投温泉は台北市の有名な温泉地で、リラックスできる自然環境があります。</p>
+                </td>
+                <td>
+                    <img src="images/yangmingshan.jpg" alt="陽明山の写真">
+                    <p>陽明山は火山活動で形成された山で、小油坑などの観光名所があります。</p>
+                </td>
+                <td>
+                    <img src="images/ximen.jpg" alt="西門町の写真">
+                    <p>西門町は台北の若者文化の中心地で、ショッピングやエンターテイメントが楽しめます。</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="images/taipei_dome.jpg" alt="大巨蛋の写真">
+                    <p>大巨蛋は台北の主要なスポーツ・イベント会場で、様々なイベントが行われます。</p>
+                </td>
+                <td>
+                    <img src="images/dadaocheng_wharf.jpg" alt="大稻埕碼頭の写真">
+                    <p>大稻埕碼頭は台北の歴史的な港で、夕日が美しいスポットです。</p>
+                </td>
+                <td>
+                    <img src="images/taihu_brewing.jpg" alt="台虎精釀の写真">
+                    <p>台虎精釀は台北で人気のあるクラフトビール醸造所です。</p>
+                </td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <p><small>Copyright &copy; 2024 リンカセイ(24CA0244), All rights reserved.</small></p>
+    </footer>
+
+<script>
+const themeToggleBtn = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') || 'light';
+
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+
+themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+});
+</script>
+</body>
+</html>

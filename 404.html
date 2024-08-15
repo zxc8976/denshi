@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>交通指南</title>
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+	
+</head>
+<body>
+    <nav>
+        <a href="index.html">ホーム</a>
+        <a href="bunka.html">文化と歴史</a>
+        <a href="meisho.html">観光スポット</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="more.html">もっと見る</a>
+        <a href="access.html">交通指南</a>
+        <button id="theme-toggle" aria-label="Switch Theme" class="btn"><span>深色模式</span></button>
+
+    </nav>
+
+ <div class="page-404">
+        <main class="custom-404-main">
+
+		
+            <img src="images/404background.jpg" alt="404 Not Found" class="custom-404-img">
+            
+        </main>
+    </div>
+
+	<div style="display: flex; justify-content: center; align-items: center;">
+   <a href="index.html" class="custom-404"><span>ホームに戻る</span><em></em></a>
+	</div>
+
+    <footer>
+        <p><small>Copyright &copy; 2024 リンカセイ(24CA0244), All rights reserved.</small></p>
+    </footer>
+
+<script>
+const themeToggleBtn = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') || 'light';
+const imgElement = document.querySelector('.custom-404-img');
+
+// 函數用於應用主題和切換背景圖片
+function applyTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+        imgElement.src = 'images/404background_black.jpg'; // 深色模式背景圖
+    } else {
+        document.body.classList.remove('dark-mode');
+        imgElement.src = 'images/404background.jpg'; // 淺色模式背景圖
+    }
+}
+
+// 初始化時應用當前主題
+applyTheme(currentTheme);
+
+// 監聽按鈕點擊事件，切換主題
+themeToggleBtn.addEventListener('click', () => {
+    const newTheme = document.body.classList.contains('dark-mode') ? 'light' : 'dark';
+    applyTheme(newTheme);
+    localStorage.setItem('theme', newTheme);
+});
+</script>
+</body>
+</html>
+

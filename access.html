@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>交通指南</title>
+       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">ホーム</a>
+        <a href="bunka.html">文化と歴史</a>
+        <a href="meisho.html">観光スポット</a>
+        <a href="contact.html">お問い合わせ</a>
+        <a href="more.html">もっと見る</a>
+        <a href="access.html">交通指南</a>
+        <button id="theme-toggle" aria-label="Switch Theme" class="btn"><span>深色模式</span></button>
+
+    </nav>
+
+    <main>
+        <h2>交通指南</h2>
+        <div class="image-box">
+            <img src="images/taipei_mrt_map.jpg" alt="台北市捷運地図" class="small-images">
+            <p>台北捷運（MRT）は台北市内および新北市の主要な交通手段で、速くて便利な移動が可能です。</p>
+            <a href="https://www.metro.taipei/default.aspx" class="btn btn-blue" target="_blank">台北捷運公式サイト</a>
+        </div>
+        <div class="image-box">
+            <img src="images/bus.jpg" alt="台北市公車" class="small-images">
+            <p>台北市内には多くの公車路線があり、市内のどこへでも手軽にアクセスできます。悠遊卡を使用すると、便利でお得に利用できます。</p>
+            <a href="https://ebus.gov.taipei/" class="btn btn-blue" target="_blank">台北公車公式サイト</a>
+        </div>
+        <div class="image-box">
+            <img src="images/ubike.jpg" alt="Ubikeの写真" class="small-images">
+            <p>Ubikeは台北市と新北市で広く利用されている公共自転車システムです。市内の様々な場所にUbikeステーションが設置されており、手軽に自転車を借りて観光を楽しめます。</p>
+            <a href="https://www.youbike.com.tw/region/main/" class="btn btn-blue" target="_blank">Ubike公式サイト</a>
+        </div>
+    </main>
+
+    <footer>
+        <p><small>Copyright &copy; 2024 リンカセイ(24CA0244), All rights reserved.</small></p>
+    </footer>
+
+<script>
+const themeToggleBtn = document.getElementById('theme-toggle');
+const currentTheme = localStorage.getItem('theme') || 'light';
+
+if (currentTheme === 'dark') {
+    document.body.classList.add('dark-mode');
+}
+
+themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
+    localStorage.setItem('theme', theme);
+});
+</script>
+</body>
+</html>
