@@ -157,7 +157,7 @@ footer {
     margin-top: 20px;
     border-top: 1px solid #ddd;
     font-size: 12px;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
 }
@@ -362,7 +362,6 @@ body.dark-mode .btn:hover {
 
 
 /* 手機版調整 */
-/* 手機版調整 */
 @media screen and (max-width: 768px) {
     /* 深色模式按鈕調整 */
     .theme-toggle-btn {
@@ -438,7 +437,7 @@ body.dark-mode .btn:hover {
 
     /* Copyright 區域固定在頁面最底部 */
     .footer {
-        position: fixed;
+        position: relative;
         bottom: 0;
         width: 100%;
         background-color: #333;
