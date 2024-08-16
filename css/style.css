@@ -359,3 +359,50 @@ body.dark-mode .btn:hover {
     background: #000;
     transform: scaleX(1);
 }
+
+
+/* 确保所有元素在移动设备上不会溢出屏幕 */
+* {
+    box-sizing: border-box;
+}
+
+/* 调整导航栏在小屏幕上的显示 */
+@media (max-width: 600px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        padding: 10px;
+        width: 100%; /* 铺满屏幕宽度 */
+        text-align: center;
+    }
+    
+    #theme-toggle {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
+
+/* 调整页面内容 */
+@media (max-width: 600px) {
+    main {
+        padding: 10px;
+    }
+    
+    .container {
+        width: 100%;
+    }
+    
+    .custom-404 {
+        min-width: 250px;
+        padding: 8px 20px;
+    }
+    
+    .page-404 img {
+        width: 90%;
+    }
+}
+
