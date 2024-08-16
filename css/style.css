@@ -361,58 +361,70 @@ body.dark-mode .btn:hover {
 }
 
 
-/* 确保所有元素在移动设备上不会溢出屏幕 */
-* {
-    box-sizing: border-box;
+/* 手機版深色模式按鈕設計 */
+@media (max-width: 600px) {
+    #theme-toggle {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #444; /* 深色背景 */
+        color: #fff; /* 字體顏色 */
+        border-radius: 50%; /* 圓形按鈕 */
+        z-index: 1000; /* 確保在最上層 */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
-/* 调整导航栏在小屏幕上的显示 */
+/* 手機版內容直行排列 */
 @media (max-width: 600px) {
-    nav {
+    .content-section {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-    
-    nav a {
-        padding: 10px;
-        width: 100%; /* 铺满屏幕宽度 */
         text-align: center;
+        margin-bottom: 20px; /* 下方間距 */
     }
-    
-    #theme-toggle {
-        margin-top: 10px;
+
+    .content-section img {
         width: 100%;
+        height: auto;
+        margin-bottom: 10px;
     }
 }
 
-/* 调整页面内容 */
+/* 手機版地圖自適應調整 */
 @media (max-width: 600px) {
-    main {
-        padding: 10px;
-    }
-    
-    .container {
+    .map-container {
         width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+        margin-bottom: 20px; /* 與其他內容的間距 */
     }
-    
-    .custom-404 {
-        min-width: 250px;
-        padding: 8px 20px;
-    }
-    
-    .page-404 img {
-        width: 90%;
+
+    .map-container iframe {
+        width: 100%;
+        height: auto;
     }
 }
-    img, iframe {
+
+/* 針對手機版的其他自訂樣式 */
+@media (max-width: 600px) {
+    .custom-404 {
+        width: 80%;
+        margin: 0 auto;
+        padding: 15px 20px;
+        background-color: rgba(68, 68, 68, 0.8); /* 設定透明度 */
+        border-radius: 15px; /* 鈍角設計 */
+        text-align: center;
+    }
+
+    .page-404 img {
+        width: 95%;
         max-width: 100%;
         height: auto;
     }
-    
-    .map-container {
-        width: 100%;
-        height: auto;
-    }
 }
-
