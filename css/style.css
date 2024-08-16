@@ -366,43 +366,72 @@ body.dark-mode .btn:hover {
     /* 深色模式按鈕調整 */
     .theme-toggle-btn {
         position: fixed;
-        top: 10px;
-        right: 10px;
+        bottom: 20px;
+        right: 20px;
         z-index: 1000;
+        background-color: #444;
+        color: #fff;
+        border-radius: 25px;
+        padding: 10px 15px;
+        font-size: 14px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    /* 圖片與地圖調整 */
-    .main-image, .main-map {
-        max-width: 100%;
+    /* 內容區塊單列排版 */
+    .content-section {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* 圖片及地圖自適應 */
+    img, iframe {
+        width: 100%;
         height: auto;
+        max-width: 100%;
         margin: 0 auto;
         display: block;
     }
 
-    /* 內容單列排版 */
-    .content-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    /* 調整文章圖片大小 */
+    .article-image {
+        width: 95%;
+        height: auto;
+        margin: 0 auto 20px auto;
     }
 
-    /* 地圖嵌入框調整 */
-    .map-container iframe {
-        width: 100%;
-        height: auto;
-        border: 0;
+    /* 內容區塊 */
+    .content-wrapper {
+        padding: 10px;
     }
-    
-    /* 返回首頁按鈕調整 */
-    .custom-404 {
-        width: 80%;
-        max-width: 280px;
-        margin: 20px auto;
-        padding: 10px 20px;
-        border-radius: 50px;
-        background-color: #444444;
-        color: #ffffff;
-        text-align: center;
+
+    /* 頁面背景調整 */
+    body {
+        background-color: #222; /* 依據深色模式需求調整背景色 */
+        color: #f0f0f0; /* 調整文字顏色以符合背景 */
+    }
+
+    /* 文字及鏈結的對比顏色調整 */
+    a, a:visited {
+        color: #1e90ff;
+    }
+
+    /* 確保所有內容都能自適應窄螢幕 */
+    .container, .main-content {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+
+    /* 調整分頁選單避免遮擋 */
+    .menu-toggle {
+        z-index: 1001;
+    }
+
+    /* 修正圖片和文字的間距 */
+    .article-content img {
+        margin-bottom: 15px;
     }
 }
+
