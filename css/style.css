@@ -405,4 +405,14 @@ body.dark-mode .btn:hover {
         width: 90%;
     }
 }
+    img, iframe {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .map-container {
+        width: 100%;
+        height: auto;
+    }
+}
 
