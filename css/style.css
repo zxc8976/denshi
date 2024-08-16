@@ -362,6 +362,7 @@ body.dark-mode .btn:hover {
 
 
 /* 手機版調整 */
+/* 手機版調整 */
 @media screen and (max-width: 768px) {
     /* 深色模式按鈕調整 */
     .theme-toggle-btn {
@@ -404,12 +405,13 @@ body.dark-mode .btn:hover {
     /* 內容區塊 */
     .content-wrapper {
         padding: 10px;
+        padding-bottom: 70px; /* 避免被底部的 footer 覆蓋 */
     }
 
     /* 頁面背景調整 */
     body {
-        background-color: #222; /* 依據深色模式需求調整背景色 */
-        color: #f0f0f0; /* 調整文字顏色以符合背景 */
+        background-color: #222; /* 深色模式背景色 */
+        color: #f0f0f0; /* 深色模式文字色 */
     }
 
     /* 文字及鏈結的對比顏色調整 */
@@ -433,24 +435,17 @@ body.dark-mode .btn:hover {
     .article-content img {
         margin-bottom: 15px;
     }
-}
-@media screen and (max-width: 768px) {
+
     /* Copyright 區域固定在頁面最底部 */
     .footer {
         position: fixed;
         bottom: 0;
         width: 100%;
-        background-color: #333; /* 您可以根據需要調整背景顏色 */
-        color: #fff; /* 文字顏色 */
+        background-color: #333;
+        color: #fff;
         text-align: center;
         padding: 10px 0;
-        font-size: 12px; /* 文字大小 */
+        font-size: 12px;
         z-index: 1000;
     }
-
-    /* 調整頁面內容的底部間距，以避免內容被 Copyright 區域覆蓋 */
-    .content-wrapper {
-        padding-bottom: 60px; /* 根據 footer 的高度來調整 */
-    }
 }
-
