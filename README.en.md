@@ -8,7 +8,3 @@ An HTML/CSS practice project. A purely static website introducing famous places 
 
 - HTML
 - CSS
-
-## Author
-
-Ken Lin — graduated from Japan Electronics College, AI Systems Department in 2026
