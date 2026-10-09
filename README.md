@@ -1,8 +1,8 @@
 [繁體中文](README.md) | [日本語](README.ja.md) | [English](README.en.md)
 
-# denshi — 日本名所・文化介紹靜態網站
+# denshi — 台北旅遊介紹靜態網站（日文）
 
-HTML/CSS 練習作品，純靜態網站，介紹日本的名所和文化。有 index、bunka、meisho、access、contact 等頁面。
+HTML/CSS 練習作品，以日文介紹台北的景點、文化與交通。有 index、bunka、meisho、access、contact 等靜態頁面。
 
 ## 技術棧
 
